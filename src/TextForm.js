@@ -17,6 +17,13 @@ let handlelowerclick=()=>{
 let handleclear=()=>{
     setText("");
 } 
+let countWords=(text)=>{
+   let words= text.split(" ").filter((element)=>{return element.length!==0})
+    return words.length;
+}
+let countLetters=(text)=>{
+return text.trim().length;
+}
     return(
         <>
 <div className="container my-4">
@@ -30,9 +37,9 @@ let handleclear=()=>{
   <button className="btn btn-primary my-3 mx-1" onClick={handleclear}>Clear</button>
 </div>
 <div className="container">
-<h1>your text Sumarry</h1>
+<h1>your text Summary</h1>
 <p>
-    number of words are: {text.split(" ").length} and total letters are {text.length}
+    number of words are: {countWords(text)} and total letters are {countLetters(text)}
 </p>
 <h3>Preview</h3>
 <p>{text.length>0?text:"Enter something to preview here."}</p>

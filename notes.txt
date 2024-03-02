@@ -1,0 +1,8 @@
+In order to refer to title of our app simply use document.title="This is our heading";
+how; to flash our title? 
+Ans: setInterval(()=>{
+    document.title="Install our app";
+},2000);
+setInterval(()=>{
+    document.title="Our app is very good";
+},1500);
